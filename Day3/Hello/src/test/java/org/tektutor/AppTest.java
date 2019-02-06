@@ -16,4 +16,9 @@ public class AppTest {
 
 	}
 
+	@Test
+	public void testFail() {
+		assertEquals ( 100, 200 );
+	}
+
 }
