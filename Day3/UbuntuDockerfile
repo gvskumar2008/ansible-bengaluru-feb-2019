@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 MAINTAINER Jeganathan Swaminathan <jegan@tektutor.org>
 
-RUN apt-get update && apt-get install -y openssh-server python-minimal java-1.8.0-openjdk-devel 
+RUN apt-get update && apt-get install -y openssh-server python-minimal openjdk-8-jdk maven git 
 RUN mkdir /var/run/sshd
 RUN echo 'root:root' | chpasswd
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
