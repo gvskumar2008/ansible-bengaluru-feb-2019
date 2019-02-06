@@ -1,0 +1,12 @@
+- name: This playbook will build Ubuntu
+  hosts: localhost
+  vars:
+     host: "tcp://localhost:4243"
+  tasks:
+    - name: Building ansible ubuntu image ...
+      docker_image:
+          name: "tektutor/ansible-ubuntu"
+          state: build
+          dockerfile: UbuntuDockerfile
+          path: .
+          docker_host: "{{host}}"
