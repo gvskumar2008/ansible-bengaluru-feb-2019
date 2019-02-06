@@ -1,0 +1,3 @@
+greeting_msg: DevOps
+provisioner_tool: Docker
+cm_tool: Ansible

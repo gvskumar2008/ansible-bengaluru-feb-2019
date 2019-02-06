@@ -1,0 +1,8 @@
+- name: This play will install, configure and deploy web page in nginx web server
+  hosts: all
+  vars_files:
+    - custom-variables-file.yml
+  tasks:
+    - include: install-nginx-{{ansible_distribution}}.yml
+    - include: configure-nginx-{{ansible_distribution}}.yml
+    - include: common-tasks.yml

@@ -1,0 +1,5 @@
+- name: Install Extra packages for Enterprise Linux (EPEL) web server in CentOS
+  yum: name=epel-release state=latest
+
+- name: Install nginx web server in CentOS
+  yum: name=nginx state=latest
